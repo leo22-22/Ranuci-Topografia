@@ -62,9 +62,9 @@
                     </li>
                     <li><a data-scroll="scrollTo" href="#feature">serviços</a>
                     </li>
-                    <li><a data-scroll="scrollTo" href="#portfolio">sobre nós</a>
+                    <li><a data-scroll="scrollTo" href="#about">sobre nós</a>
                     </li>
-                    <li><a data-scroll="scrollTo" href="#skills">trabalhos</a>
+                    <li><a data-scroll="scrollTo" href="#portfolio">trabalhos</a>
                     </li>
                     <li><a data-scroll="scrollTo" href="#contact">contato</a>
                     </li>
@@ -90,7 +90,7 @@
                     <div class="hero--content">
                         <h1 class="hero--headline">Mais de 20 Anos Mapeando o Caminho Certo</h1>
                         <p class="hero--bio">Soluções completas em topografia e georreferenciamento para viabilizar seu investimento do início ao fim.</p>
-                        <a href="https://wa.link/lnb3o1" class="btn btn--primary btn--rounded">Entrar em Contato</a>
+                        <a href="#" class="btn btn--primary btn--rounded">Entrar em Contato</a>
                     </div>
                 </div>
                 <!-- .col-md-10 end -->
@@ -180,7 +180,7 @@
 </section>
 <!-- #feature  end -->
 
-<section id="portfolio" class="about-section section bg-white">
+<section id="about" class="about-section section bg-white">
     <div class="container">
         <div class="about-wrapper">
             <div class="about-images">
@@ -196,7 +196,7 @@
                 <p>
                     Nossa equipe qualificada atua com foco em otimizar e viabilizar os projetos de nossos clientes, entregando resultados com máxima precisão, agilidade e inovação.
                 </p>
-                <a href="https://wa.link/lnb3o1" class="btn btn--primary btn--rounded">Entrar em contato</a>
+                <a href="#contact" class="btn btn--primary btn--rounded">Entrar em contato</a>
             </div>
 
         </div>
@@ -205,7 +205,7 @@
 
 <!-- Portfolio #1
 ============================================= -->
-<section id="skills" class="section portfolio portfolio-grid portfolio-2 pb-70">
+<section id="portfolio" class="section portfolio portfolio-grid portfolio-2 pb-70">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
@@ -274,7 +274,8 @@
 <section id="contact" class="contact-section section">
     <div class="contact-container">
         <h1>Entre em Contato</h1>
-        <form id="Forms" class="contact-form" method="POST" action="">
+        <form id="Forms" class="contact-form row col-md-6 justify-content-center" method="POST" action="{{route ('contact.send')}}">
+            @csrf
             <div class="form-row" style="margin: 0;">
                 <div class="form-group" style="margin: 0;">
                     <label for="nome">Nome</label>
@@ -304,17 +305,9 @@
 <section id="map" class="section google-maps pb-0 pt-0">
 	<div class="container-fluid">
 		<div class="row">
-			<div style="display: flex; justify-content: center; align-items: center; min-height: 300px; border: 1px solid #006B3C; padding: 20px;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7405.333985463792!2d-51.832485!3d-21.870377000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9491657702cd1dc9%3A0xf74c32ae430de568!2sRanuci%20Topografia!5e0!3m2!1spt-BR!2sbr!4v1753196007139!5m2!1spt-BR!2sbr"
-                    width="400"
-                    height="250"
-                    style="border: 1px solid #006B3C; border-radius: 20px; box-shadow: 0 4px 8px #006B3C;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+			<div class="col-xs-12  col-sm-12  col-md-12 pr-0 pl-0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.181996472297!2d-51.83392402926069!3d-21.870319349443616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9491657702cd1dc9%3A0xf74c32ae430de568!2sRanuci%20Topografia!5e0!3m2!1spt-BR!2sbr!4v1753902785766!5m2!1spt-BR!2sbr" width="100%" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-            </div>
 			</div>
 		</div>
 	</div>
@@ -371,14 +364,8 @@
                 <!-- .col-md-6 end -->
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="widget--social text-right text-center-xs">
-                        <a class="facebook" href="#">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a class="twitter" href="#">
-                            <i class="fa fa-twitter"></i>
-                         </a>
                         <a class="dribbble" href="#">
-                            <i class="fa fa-dribbble"></i>
+                            <i class="fa fa-whatsapp"></i>
                         </a>
                         <a class="instagram" href="#">
                             <i class="fa fa-instagram"></i>
@@ -403,6 +390,8 @@
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/functions.js"></script>
+<script src="assets/js/EnvioDinamico.js"></script>
+<script src="assets/js/MascaraTell.js"></script>
 </body>
 
 </html>

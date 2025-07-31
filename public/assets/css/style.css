@@ -3532,7 +3532,7 @@ li a:hover,
 
 .form-row {
     display: flex;
-    gap: 100px;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
